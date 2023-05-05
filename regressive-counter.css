@@ -6,4 +6,26 @@
     background-color: white;
     color: black;
     padding: 6px;
+    width: 335px;
+    flex-wrap: wrap;
+
+    border-radius: 12px;
+}
+
+.regressive-counter .day, .regressive-counter .hour, .regressive-counter .minute, .regressive-counter .second{
+    font-size: 3rem;
+    font-family: 'Berkshire Swash', 'Times New Roman', Times, serif;
+} 
+
+@media (max-width:500px) {
+    .regressive-counter{
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media (max-width:370px) {
+    .regressive-counter .day, .regressive-counter .hour, .regressive-counter .minute, .regressive-counter .second{
+        width: 50vw;
+    } 
 }
