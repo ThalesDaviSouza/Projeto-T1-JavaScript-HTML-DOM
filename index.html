@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./redesign.css">
+    <link rel="stylesheet" href="./regressive-counter.css">
+
+    <title>Projeto JS</title>
+</head>
+<body>
+    <div>
+        <h1>Restam:</h1>
+        <!--
+            The mounth number is the normal number - 1,
+            Example: December will be 11 (12 - 1 = 11) 
+            or January will be 0 (1 - 1 = 0)
+        -->
+        <div class="regressive-counter" 
+            data-deadline-year="2023"
+            data-deadline-day="5"
+            data-deadline-mounth="6" 
+            data-deadline-hour="9"
+            data-deadline-minute="13"
+            data-deadline-second="5">
+            <div class="day-section">
+                <div class="day">0</div>
+                <div class="text-day">Day</div>
+            </div>
+            <div class="hour-section">
+                <div class="hour">0</div>
+                <div class="text-hour">Hour</div>
+            </div>
+            <div class="minute-section">
+                <div class="minute">0</div>
+                <div class="text-minute">Minute</div>
+            </div>
+            <div class="second-section">
+                <div class="second">0</div>
+                <div class="text-second">Second</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./regressive-counter.js"></script>
+</html>

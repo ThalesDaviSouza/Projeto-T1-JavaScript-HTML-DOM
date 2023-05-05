@@ -1,0 +1,9 @@
+.regressive-counter{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+    background-color: white;
+    color: black;
+    padding: 6px;
+}
