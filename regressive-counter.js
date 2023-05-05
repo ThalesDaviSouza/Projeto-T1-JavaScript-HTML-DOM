@@ -1,9 +1,13 @@
 const second = 1000;
-const minute = second * 60
-const hour = minute * 60
-const day = hour * 24 
+const minute = second * 60;
+const hour = minute * 60;
+const day = hour * 24; 
 
 document.addEventListener("DOMContentLoaded", () => {
+    setInterval(regressiveCounter, 1000)
+})
+
+function regressiveCounter(){
     document.querySelectorAll('.regressive-counter').forEach(counter => {
         let deadlineData = {
             year: counter.dataset.deadlineYear,
@@ -18,23 +22,75 @@ document.addEventListener("DOMContentLoaded", () => {
         
         let actualDate = new Date()
 
+        let datesDifference = deadlineDate.getTime() - actualDate.getTime() 
         
-        let stillTime = (deadlineDate.getTime() - actualDate.getTime()) > 0
+        let stillTime = datesDifference > 0
 
         if(stillTime){
-            setDayRemaining(counter, stillTime)
+            setDaysRemaining(counter, datesDifference)
+            setHoursRemaining(counter, datesDifference)
+            setMinutesRemaining(counter, datesDifference)
+            setSecondsRemaining(counter, datesDifference)
         }
-
-        console.log(counter.querySelector('.day'))
-
     })
-})
-
-function millisecondsToDays(milliseconds){
-    return Math.floor((milliseconds % day))
 }
 
-function setDayRemaining(counter, stillTime){
-    console.log(millisecondsToDays(stillTime))
-    counter.querySelector('.day').innerHtml = `${millisecondsToDays(stillTime)}`  
+function millisecondsToDays(milliseconds){
+    return Math.floor((milliseconds / day))
+}
+
+function millisecondsToHours(milliseconds){
+    return Math.floor((milliseconds % day) / hour)
+}
+
+function millisecondsToMinutes(milliseconds){
+    return Math.floor((milliseconds % hour) / minute)
+}
+
+function millisecondsToSeconds(milliseconds){
+    return Math.floor((milliseconds % minute) / second)
+}
+
+function setDaysRemaining(counter, milliseconds){
+    let daysLeft = millisecondsToDays(milliseconds);
+    counter.querySelector('.day').innerHTML = daysLeft
+    
+    if(daysLeft > 1){
+        counter.querySelector('.text-day').innerHTML = 'Days'
+    }else{
+        counter.querySelector('.text-day').innerHTML = 'Day'
+    }
+}
+
+function setHoursRemaining(counter, milliseconds){
+    let hoursLeft = millisecondsToHours(milliseconds)
+    counter.querySelector('.hour').innerHTML = hoursLeft
+    
+    if(hoursLeft > 1){
+        counter.querySelector('.text-hour').innerHTML = 'Hours'
+    }else{
+        counter.querySelector('.text-hour').innerHTML = 'Hour'
+    }
+}
+
+function setMinutesRemaining(counter, milliseconds){
+    let minutesLeft = millisecondsToMinutes(milliseconds)
+    counter.querySelector('.minute').innerHTML = minutesLeft
+
+    if(minutesLeft > 1){
+        counter.querySelector('.text-minute').innerHTML = 'Minutes'
+    }else{
+        counter.querySelector('.text-minute').innerHTML = 'Minute'
+    }
+}
+
+function setSecondsRemaining(counter, milliseconds){
+    let secondsLeft = millisecondsToSeconds(milliseconds)
+    counter.querySelector('.second').innerHTML = secondsLeft
+
+    if(secondsLeft > 1){
+        counter.querySelector('.text-second').innerHTML = 'Seconds'
+    }else{
+        counter.querySelector('.text-second').innerHTML = 'Second'
+    }
 }
