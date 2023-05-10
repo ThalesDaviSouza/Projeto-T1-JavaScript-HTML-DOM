@@ -12,3 +12,17 @@ A primeira etapa de um projeto, mesmo que seja *simples*, é a organização de 
 - Caio César *(Back-end)*
 - Eduardo Santos Birchal *(Front-end)*
 - Arthur Henrique *(Front-end)*
+
+## Funcionamento do Componente
+É bem simples o funcionamento do componente. O countdown-timer tem alguns datasets que podem ser modificados pelo usuário que definem a data final. Esses datasets são utilizados pelo script em JavaScript para gerar um Date no backend. No backend, a data gerada é subtraida da data atual através do getTime(), o getTime retorna a data em milissegundos, assim permitindo calcular qual a diferença entre as datas através do resto da subtração de uma data pela outra. Nos utilizamos o resto da subtração para calcular qual a diferença em dias, horas, minutos e segundos das datas.
+
+## Importando o Componente
+O procedimento para utilizar esse countdown-timer em outra aplicação web é muito simples. <br/>
+- Baixar o .css e o .js que são chamados 'regressive-timer'
+- Chamar esses arquivos no seu código
+- Copiar o countdown-timer do *index.html*
+- Definir a data limite nos datasets
+- [Opcional] Copiar os links do google fonts no head do index (apenas se quiser manter a estilização na página de demonstração)
+
+## Estilizando o Componente
+Para adequar a estilização do timer a sua aplicação web recomendamos editar o arquivo .css que falamos para importar junto com o timer.
