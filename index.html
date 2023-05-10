@@ -12,42 +12,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
 
+    <link rel="icon" href="./Logo.jpg">
+
+    <link rel="stylesheet" href="./styles.css">
+
     <title>Projeto JS</title>
 </head>
 <body>
-    <div>
-        <h1>Restam:</h1>
+    <main>
+        <h1>O evento ira começar em:</h1>
         <!--
             The mounth number is the normal number - 1,
             Example: December will be 11 (12 - 1 = 11) 
             or January will be 0 (1 - 1 = 0)
         -->
         <div class="regressive-counter" 
-            data-deadline-year="2023"
+            data-deadline-year="2024"
             data-deadline-mounth="4" 
             data-deadline-day="6"
             data-deadline-hour="20"
             data-deadline-minute="34"
-            data-deadline-second="0">
+            data-deadline-second="6">
             <div class="day-section">
-                <div class="day">0</div>
-                <div class="text-day">Day</div>
+                <div class="day">*</div>
+                <div class="text-day">*</div>
             </div>
             <div class="hour-section">
-                <div class="hour">0</div>
-                <div class="text-hour">Hour</div>
+                <div class="hour">*</div>
+                <div class="text-hour">*</div>
             </div>
             <div class="minute-section">
-                <div class="minute">0</div>
-                <div class="text-minute">Minute</div>
+                <div class="minute">*</div>
+                <div class="text-minute">*</div>
             </div>
             <div class="second-section">
-                <div class="second">0</div>
-                <div class="text-second">Second</div>
+                <div class="second">*</div>
+                <div class="text-second">*</div>
             </div>
         </div>
-    </div>
-    
+
+    </main>
 
     <script src="./regressive-counter.js"></script>
 </body>
