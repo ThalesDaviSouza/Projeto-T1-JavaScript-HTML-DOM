@@ -14,7 +14,8 @@ A primeira etapa de um projeto, mesmo que seja *simples*, é a organização de 
 - Arthur Henrique *(Front-end)*
 
 ## Funcionamento do Componente
-É bem simples o funcionamento do componente. O countdown-timer tem alguns datasets que podem ser modificados pelo usuário que definem a data final. Esses datasets são utilizados pelo script em JavaScript para gerar um Date no backend. No backend, a data gerada é subtraida da data atual através do getTime(), o getTime retorna a data em milissegundos, assim permitindo calcular qual a diferença entre as datas através do resto da subtração de uma data pela outra. Nos utilizamos o resto da subtração para calcular qual a diferença em dias, horas, minutos e segundos das datas.
+É bem simples o funcionamento do componente. O countdown-timer tem alguns datasets que podem ser modificados pelo usuário que definem a data final. Esses datasets são utilizados pelo script em JavaScript para gerar um Date no backend. No backend, a data gerada é subtraida da data atual através do getTime(), o getTime retorna a data em milissegundos, assim permitindo calcular qual a diferença entre as datas através do resto da subtração de uma data pela outra. Nos utilizamos o resto da subtração para calcular qual a diferença em dias, horas, minutos e segundos das datas.<br/>
+Vale ressaltar que ao chegar na data limite o countdown-timer tem seu display mudado para none, para revelar uma div que pode mostrar o que o desenvolvedor quiser. Em nossa demonstração, colocamos uma mensagem com um link embaixo.
 
 ## Importando o Componente
 O procedimento para utilizar esse countdown-timer em outra aplicação web é muito simples. <br/>
