@@ -3,8 +3,11 @@ body{
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    background-blend-mode: luminosity;
+    background-blend-mode: hard-light;
+    background-color: chocolate;
+
     height: 100vh;
+    
 }
 
 main{
@@ -14,6 +17,7 @@ main{
 }
 
 main h1{
+    font-family: 'Rubik', sans-serif;;
     text-align: center;
     font-size: 4rem;
     margin: 25px;

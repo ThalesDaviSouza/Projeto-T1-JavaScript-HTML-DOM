@@ -21,7 +21,7 @@ function regressiveCounter(){
         let deadlineDate = new Date(deadlineData.year, deadlineData.mounth, deadlineData.day, deadlineData.Hour, deadlineData.minute, deadlineData.second)
         
         let actualDate = new Date()
-
+        console.log(deadlineDate.getTime(), actualDate.getTime())
         let datesDifference = deadlineDate.getTime() - actualDate.getTime() 
         
         let stillTime = datesDifference > 0
@@ -31,8 +31,18 @@ function regressiveCounter(){
             setHoursRemaining(counter, datesDifference)
             setMinutesRemaining(counter, datesDifference)
             setSecondsRemaining(counter, datesDifference)
+        }else{
+            showHiddenCountdown(counter)
         }
     })
+}
+
+function showHiddenCountdown(counter){
+    counter.querySelector('.day-section').style.display='none'
+    counter.querySelector('.hour-section').style.display='none'
+    counter.querySelector('.minute-section').style.display='none'
+    counter.querySelector('.second-section').style.display='none'
+    counter.querySelector('.msg-section').style.display=''
 }
 
 function millisecondsToDays(milliseconds){

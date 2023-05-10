@@ -14,7 +14,7 @@
 
 .regressive-counter .day, .regressive-counter .hour, .regressive-counter .minute, .regressive-counter .second{
     font-size: 3rem;
-    font-family: 'Berkshire Swash', 'Times New Roman', Times, serif;
+    font-family: 'Poppins', sans-serif, 'Times New Roman', Times, serif;
 } 
 
 @media (max-width:500px) {

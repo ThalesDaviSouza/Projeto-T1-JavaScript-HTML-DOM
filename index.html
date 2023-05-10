@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap" rel="stylesheet">
 
     <link rel="icon" href="./Logo.jpg">
 
@@ -49,10 +49,27 @@
                 <div class="second">*</div>
                 <div class="text-second">*</div>
             </div>
+            <div class="msg-section" style="display: none;">
+                <h1>Depois do Fim agora pode ser ouvido: </h1>
+                <a>Link pro spotify</a>
+            </div>
         </div>
 
     </main>
-
     <script src="./regressive-counter.js"></script>
+
+    <script>
+        let date = new Date()
+        let countdown = document.querySelector('.regressive-counter')
+
+        console.log(countdown.dataset)
+        countdown.dataset.deadlineYear = date.getFullYear()
+        countdown.dataset.deadlineMounth = date.getMonth()
+        countdown.dataset.deadlineDay = date.getDate()
+        countdown.dataset.deadlineHour = date.getHours()
+        countdown.dataset.deadlineMinute = date.getMinutes()+1
+        countdown.dataset.deadlineSecond = date.getSeconds()
+        console.log(countdown.dataset)
+    </script>
 </body>
 </html>
