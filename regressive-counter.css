@@ -3,20 +3,37 @@
     justify-content: space-around;
     text-align: center;
     flex-direction: row;
-    background-color: white;
+    background-color: rgba(255, 255,255, 0.6);
     color: black;
     padding: 6px;
-    width: 335px;
+    min-width: 335px;
     flex-wrap: wrap;
 
     border-radius: 12px;
+
+    transition: 0.2s;
+}
+
+.regressive-counter a{
+    color: green;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: 0.2s;
+}
+
+.regressive-counter:hover a {font-size: 2.5rem;}
+
+.regressive-counter a:hover{
+    color: greenyellow;
 }
 
 .regressive-counter .day, .regressive-counter .hour, .regressive-counter .minute, .regressive-counter .second{
     font-size: 3rem;
     font-family: 'Poppins', sans-serif, 'Times New Roman', Times, serif;
 } 
-
+@media (min-width:500px) {
+    .regressive-counter:hover{min-width: 450px;}
+}
 @media (max-width:500px) {
     .regressive-counter{
         width: 100%;

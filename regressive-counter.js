@@ -65,7 +65,7 @@ function setDaysRemaining(counter, milliseconds){
     let daysLeft = millisecondsToDays(milliseconds);
     counter.querySelector('.day').innerHTML = daysLeft
     
-    if(daysLeft > 1){
+    if(daysLeft != 1){
         counter.querySelector('.text-day').innerHTML = 'Days'
     }else{
         counter.querySelector('.text-day').innerHTML = 'Day'
@@ -76,7 +76,7 @@ function setHoursRemaining(counter, milliseconds){
     let hoursLeft = millisecondsToHours(milliseconds)
     counter.querySelector('.hour').innerHTML = hoursLeft
     
-    if(hoursLeft > 1){
+    if(hoursLeft != 1){
         counter.querySelector('.text-hour').innerHTML = 'Hours'
     }else{
         counter.querySelector('.text-hour').innerHTML = 'Hour'
@@ -87,7 +87,7 @@ function setMinutesRemaining(counter, milliseconds){
     let minutesLeft = millisecondsToMinutes(milliseconds)
     counter.querySelector('.minute').innerHTML = minutesLeft
 
-    if(minutesLeft > 1){
+    if(minutesLeft != 1){
         counter.querySelector('.text-minute').innerHTML = 'Minutes'
     }else{
         counter.querySelector('.text-minute').innerHTML = 'Minute'
@@ -98,7 +98,7 @@ function setSecondsRemaining(counter, milliseconds){
     let secondsLeft = millisecondsToSeconds(milliseconds)
     counter.querySelector('.second').innerHTML = secondsLeft
 
-    if(secondsLeft > 1){
+    if(secondsLeft != 1){
         counter.querySelector('.text-second').innerHTML = 'Seconds'
     }else{
         counter.querySelector('.text-second').innerHTML = 'Second'

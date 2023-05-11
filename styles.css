@@ -3,8 +3,8 @@ body{
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    background-blend-mode: hard-light;
-    background-color: chocolate;
+    background-blend-mode: luminosity;
+    background-color: lime;
 
     height: 100vh;
     
